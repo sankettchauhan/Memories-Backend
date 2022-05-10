@@ -3,17 +3,11 @@ const express = require("express");
 // routes
 const authRoutes = require("../routes/auth.route");
 const memoryRoutes = require("../routes/memory.route");
-const { NODE_ENV, ORIGIN } = require("../config");
+const { NODE_ENV } = require("../config");
 
 module.exports = function (app) {
   app.use(express.json());
-  app.use(
-    cors({
-      credentials: true,
-      origin: ORIGIN,
-      optionsSuccessStatus: 200,
-    })
-  );
+  app.use(cors());
   //   morgan
   if (NODE_ENV === "development") {
     const morgan = require("morgan");
