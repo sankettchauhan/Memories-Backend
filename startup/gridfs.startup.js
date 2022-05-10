@@ -34,13 +34,4 @@ module.exports = function (app) {
       next({ status: 404, message: API_ENDPOINT_NOT_FOUND_ERR });
     }
   });
-
-  app.delete("/file/:filename", async (req, res, next) => {
-    try {
-      await gfs.files.deleteOne({ filename: req.params.filename });
-      res.send("success");
-    } catch (error) {
-      next(error);
-    }
-  });
 };
