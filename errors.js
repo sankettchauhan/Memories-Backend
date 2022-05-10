@@ -1,4 +1,4 @@
-exports.API_ENDPOINT_NOT_FOUND_ERR = "API endpoint not found";
+exports.API_ENDPOINT_NOT_FOUND_ERR = "Page not found";
 
 exports.SERVER_ERR = "Something went wrong";
 
@@ -20,3 +20,5 @@ exports.PHONE_NOT_FOUND_ERR = "Phone number not registered, please register.";
 exports.INCORRECT_OTP_ERR = "Incorrect OTP entered.";
 
 exports.SMS_NOT_SENT = "SMS was not sent.";
+
+exports.FILE_NOT_FOUND = "File not found";
