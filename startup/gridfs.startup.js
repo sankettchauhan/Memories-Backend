@@ -1,3 +1,4 @@
+const cors = require("cors");
 const mongoose = require("mongoose");
 const Grid = require("gridfs-stream");
 const uploadRoutes = require("../routes/upload.route");
@@ -13,6 +14,8 @@ module.exports = function (app) {
     gfs = Grid(conn.db, mongoose.mongo);
     gfs.collection("images");
   });
+
+  app.use(cors());
 
   app.use("/file", uploadRoutes);
 
